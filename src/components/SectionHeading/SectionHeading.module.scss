@@ -1,0 +1,17 @@
+@import '../../themes/theme-1';
+
+.sectionHeading {
+  display: 'flex';
+  &__container{
+    align-self: stretch;
+  }
+  &__title_container {
+    text-align: center;
+  }
+  &__title{
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    font-weight: lighter;
+  }
+}
