@@ -1,4 +1,7 @@
 import * as React from 'react';
+
+import Gallery from '@browniebroke/gatsby-image-gallery';
+
 import Grid from '@material-ui/core/Grid';
 import { StaticImage } from 'gatsby-plugin-image';
 
@@ -16,21 +19,40 @@ import SectionHeading from '../../components/SectionHeading';
 
 import * as styles from './work.module.scss';
 
-const PrintPage = () => {
-  const { allFile } = useStaticQuery(graphql`
-    query {
-      allFile(filter: {absolutePath: {regex: "/graphicdesign\/hero/"}}) {
-        edges {
-          node {
-            id
-            name
-            absolutePath
-            publicURL
+export const query = graphql`
+  query {
+    allFile(filter: {absolutePath: {regex: "/graphicdesign\/hero/"}}) {
+      edges {
+        node {
+          id
+          name
+          absolutePath
+          publicURL
+        }
+      }
+    }
+    images: allFile(filter: {absolutePath: {regex: "/graphicdesign\/gallery/"}}) {
+      edges {
+        node {
+          childImageSharp {
+            thumb: gatsbyImageData(
+              width: 270
+              height: 270
+              placeholder: BLURRED
+            )
+            full: gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }
     }
-  `);
+  }
+`;
+
+const PrintPage = ({ data: { images, allFile } }) => {
+  const galleryImages = images.edges
+    .map(({ node }) => node.childImageSharp)
+    .filter((image) => image?.thumb);
+
   return (
     <Page headerColor="black">
       <SEO title="Work" />
@@ -39,52 +61,7 @@ const PrintPage = () => {
         images={allFile?.edges?.map(({ node }) => node)}
       />
       <Section>
-        <Grid container spacing={8} style={{ padding: '40px' }}>
-          <Grid item xs={12} sm={4}>
-            <h1 className={styles.sectionTitle}>Video</h1>
-            <p className={styles.sectionDescription}>
-              Inspired by the hard list by Andy Fricella. Keep track of your critical tasks that need to be done each day.
-            </p>
-          </Grid>
-          <Grid item xs={12} sm={8} style={{ display: 'flex', justifyContent: 'center' }}>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/X7VMtUum7wY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-          </Grid>
-        </Grid>
-      </Section>
-      <Section>
-        <Grid container spacing={8} style={{ padding: '40px' }}>
-          <Grid item xs={12} sm={8} style={{ display: 'flex', justifyContent: 'center' }}>
-            <StaticImage
-              src="../../assets/images/print/tshirtpress.jpg"
-            />
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <p className={styles.sectionUpperTitle}>A picture is worth a thousand words</p>
-            <h1 className={styles.sectionTitle}>Print</h1>
-            <p className={styles.sectionDescription}>
-              Printing t-shirts, designing flyers, branding content.
-            </p>
-            <Button variant="contained" onClick={() => navigate('/work/print')}><p style={{ margin: '5px 10px' }}>View More</p></Button>
-          </Grid>
-        </Grid>
-      </Section>
-      <Section>
-        <Grid container spacing={8} style={{ padding: '40px' }}>
-          <Grid item xs={12} sm={4}>
-            <p className={styles.sectionUpperTitle}>A picture is worth a thousand words</p>
-            <h1 className={styles.sectionTitle}>Print</h1>
-            <p className={styles.sectionDescription}>
-              Printing t-shirts, designing flyers, branding content.
-            </p>
-            <Button variant="contained" onClick={() => navigate('/work/print')}><p style={{ margin: '5px 10px' }}>View More</p></Button>
-          </Grid>
-          <Grid item xs={12} sm={8} style={{ display: 'flex', justifyContent: 'center' }}>
-            <StaticImage
-              src="../../assets/images/print/tshirtpress.jpg"
-            />
-          </Grid>
-
-        </Grid>
+        { galleryImages?.length ? <Gallery images={galleryImages} /> : null }
       </Section>
     </Page>
   );

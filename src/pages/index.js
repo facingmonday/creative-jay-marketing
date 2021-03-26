@@ -1,9 +1,10 @@
 import * as React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { Link, graphql } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import HeroVideo from '../components/HeroVideo';
+import BackgroundSlider from 'gatsby-image-background-slider';
 
+import HeroCarousel from '../components/HeroCarousel';
 import Page from '../components/Page';
 import SEO from '../components/SEO';
 import Button from '../components/Button';
@@ -14,12 +15,27 @@ import SectionHeading from '../components/SectionHeading';
 
 import * as styles from './index.module.scss';
 
+export const query = graphql`
+  query {
+    allFile(filter: {absolutePath: {regex: "/home\/carousel/"}}) {
+      edges {
+        node {
+          id
+          name
+          absolutePath
+          publicURL
+        }
+      }
+    }
+  }
+`;
+
 const IndexPage = ({ data }) => (
-  <Page>
+  <Page headerColor="black">
     <SEO title="Home" />
-    <HeroVideo
+    <HeroCarousel
       title="Professional Video Editing"
-      videoId="393604471"
+      images={data?.allFile?.edges?.map(({ node }) => node)}
     />
     <Section>
       <Grid container spacing={8} style={{ padding: '40px' }}>

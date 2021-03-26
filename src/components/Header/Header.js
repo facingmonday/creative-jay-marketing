@@ -20,7 +20,9 @@ class Header extends Component {
 
   handleLinkClick(val) {
     this.setState({ menuOpen: false });
-    window.location.pathname = val.href;
+    if (typeof window !== 'undefined') {
+      window.location.pathname = val.href;
+    }
   }
 
   render() {

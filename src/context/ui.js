@@ -15,11 +15,15 @@ export class UIProvider extends React.Component {
   componentDidMount() {
     // check isMobile on mount
     this.onResize();
-    window.addEventListener('resize', debounce(this.onResize, 200));
+    if(typeof window != 'undefined'){
+      window.addEventListener('resize', debounce(this.onResize, 200));
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.onResize);
+    if(typeof window != 'undefined'){
+      window.removeEventListener('resize', this.onResize);
+    }
   }
 
   // loading sceen homepage
@@ -31,7 +35,7 @@ export class UIProvider extends React.Component {
 
   onResize = () => {
     // update mobile / desktop mq check
-    const isMobile = !window.matchMedia('(min-width: 1080px)').matches;
+    const isMobile = typeof window != "undefined" && !window.matchMedia('(min-width: 1080px)').matches;
 
     this.setState({
       isMobile,

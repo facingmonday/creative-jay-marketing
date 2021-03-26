@@ -6217,7 +6217,12 @@
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-"gatsby-image@^3.1.0":
+"gatsby-image-background-slider@^0.0.4":
+  "integrity" "sha512-g09T4vrKUirl1eOVCnUpWGYXvlYChpjW6Wu7FQfP4jPCk5Jg/ROYXMUtai1ieXbiQ75BaRbWLcVsSkTxeqBYjw=="
+  "resolved" "https://registry.npmjs.org/gatsby-image-background-slider/-/gatsby-image-background-slider-0.0.4.tgz"
+  "version" "0.0.4"
+
+"gatsby-image@^2.0.0", "gatsby-image@^3.1.0":
   "integrity" "sha512-wF/Ck0IagcUeVCtS7E9TYYPR5w95Dgiiu5soysI92Rvjw0KIBYA2nXWcC7JO7nV9ef4UBwJR4Dy4rjHIdOPI9w=="
   "resolved" "https://registry.npmjs.org/gatsby-image/-/gatsby-image-3.1.0.tgz"
   "version" "3.1.0"
@@ -6339,7 +6344,7 @@
     "resolve-url-loader" "^3.1.2"
     "sass-loader" "^10.1.1"
 
-"gatsby-plugin-sharp@^3.0.0", "gatsby-plugin-sharp@^3.0.0-next.0":
+"gatsby-plugin-sharp@^2.0.0", "gatsby-plugin-sharp@^3.0.0", "gatsby-plugin-sharp@^3.0.0-next.0":
   "integrity" "sha512-gmIzHjv+JaW1Gyyrz81s43yBkqtMpgvGb6qbPzH2ZX8V2YTyd9LnfUxKx/uTwluEB5oz/om4jtHSCH5DSUsTFA=="
   "resolved" "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-3.0.0.tgz"
   "version" "3.0.0"
@@ -6456,7 +6461,7 @@
     "xstate" "^4.9.1"
     "yoga-layout-prebuilt" "^1.9.6"
 
-"gatsby-source-filesystem@^3.0.0", "gatsby-source-filesystem@^3.0.0-next.0":
+"gatsby-source-filesystem@^2.0.0", "gatsby-source-filesystem@^3.0.0", "gatsby-source-filesystem@^3.0.0-next.0":
   "integrity" "sha512-t51BSxAqRKO/veY99U/TcsWA7C1MRIokOJHGHoJij1ZLBzvB2GMB7dNQHhAyHa7MWwfzAwd7jI/TJCJX9l0KlQ=="
   "resolved" "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.0.0.tgz"
   "version" "3.0.0"
@@ -6529,7 +6534,7 @@
     "unist-util-select" "^1.5.0"
     "unist-util-visit" "^1.4.1"
 
-"gatsby-transformer-sharp@^3.0.0":
+"gatsby-transformer-sharp@^2.0.0", "gatsby-transformer-sharp@^3.0.0":
   "integrity" "sha512-ydkUxYdoELPHcuE2OyTjgS3odcCikn6MPRC//dxPYDrIDMoJ6xPkbetTrshOEdGa2Yf02pp75Fs82PSeC+AXhA=="
   "resolved" "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-3.0.0.tgz"
   "version" "3.0.0"
@@ -6543,7 +6548,7 @@
     "semver" "^7.3.4"
     "sharp" "^0.27.0"
 
-"gatsby@^3.0.0-next.0", "gatsby@^3.0.1":
+"gatsby@^2.0.0", "gatsby@^3.0.0-next.0", "gatsby@^3.0.1":
   "integrity" "sha512-ap9gbjPrk9ft1SY+fsAKfOpHWfUS+wb5kkeRxOunsQvvizoCUqCcxlRbuNpw1EKmPoHGbHN5D1vVEh1RXAwM6g=="
   "resolved" "https://registry.yarnpkg.com/gatsby/-/gatsby-3.0.1.tgz"
   "version" "3.0.1"
@@ -11068,7 +11073,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.5.10", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2":
+"prop-types@^15.5.10", "prop-types@^15.5.4", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2":
   "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
   "resolved" "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -11280,7 +11285,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@^0.14.0 || ^15.0.0 || ^16 || ^17", "react-dom@^16.14.0 || ^17.0.0", "react-dom@^16.8.0 || ^17.0.0", "react-dom@^16.9.0 || ^17.0.0", "react-dom@^17.0.1", "react-dom@>= 16.8.0", "react-dom@>=16.6.0", "react-dom@>=16.x", "react-dom@15.x || 16.x || 17.x":
+"react-dom@^0.14.0 || ^15.0.0 || ^16 || ^17", "react-dom@^16.0.0", "react-dom@^16.14.0 || ^17.0.0", "react-dom@^16.8.0 || ^17.0.0", "react-dom@^16.9.0 || ^17.0.0", "react-dom@^17.0.1", "react-dom@>= 16.8.0", "react-dom@>=16.6.0", "react-dom@>=16.x", "react-dom@15.x || 16.x || 17.x":
   "integrity" "sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug=="
   "resolved" "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.1.tgz"
   "version" "17.0.1"
@@ -11374,12 +11379,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react-youtube-background@^1.0.0":
-  "integrity" "sha512-EEnpEyPAjUIMi1QJM620r6NdBDHuC7Dg12/B3L8m0mA1hqYDCLOdEq0rjbk9demX7bVXQAU5zuRQ0MXpWoFY+w=="
-  "resolved" "https://registry.npmjs.org/react-youtube-background/-/react-youtube-background-1.0.0.tgz"
-  "version" "1.0.0"
-
-"react@^0.14.0 || ^15.0.0 || ^16 || ^17", "react@^16.14.0", "react@^16.14.0 || ^17.0.0", "react@^16.3.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.6 || ^17", "react@^16.9.0 || ^17.0.0", "react@^16.x", "react@^17.0.1", "react@>= 16.8.0", "react@>=16", "react@>=16.3.0", "react@>=16.6.0", "react@>=16.x", "react@15.x || 16.x || 17.x", "react@17.0.1":
+"react@^0.14.0 || ^15.0.0 || ^16 || ^17", "react@^16.0.0", "react@^16.14.0", "react@^16.14.0 || ^17.0.0", "react@^16.3.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.6 || ^17", "react@^16.9.0 || ^17.0.0", "react@^16.x", "react@^17.0.1", "react@>= 16.8.0", "react@>=16", "react@>=16.3.0", "react@>=16.6.0", "react@>=16.x", "react@15.x || 16.x || 17.x", "react@17.0.1":
   "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
   "resolved" "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz"
   "version" "17.0.1"
