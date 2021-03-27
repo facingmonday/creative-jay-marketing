@@ -33,10 +33,9 @@ export const query = graphql`
 const IndexPage = ({ data }) => (
   <Page headerColor="black">
     <SEO title="Home" />
-    <HeroCarousel
-      title="Professional Video Editing"
-      images={data?.allFile?.edges?.map(({ node }) => node)}
-    />
+    <div className={styles.embedContainer}>
+      <iframe src="https://player.vimeo.com/video/529616897?autoplay=1&muted=1" width="640" height="360" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen />
+    </div>
     <Section>
       <Grid container spacing={8} style={{ padding: '40px' }}>
         <Grid item xs={12} sm={4}>
