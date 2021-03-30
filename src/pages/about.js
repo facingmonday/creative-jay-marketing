@@ -128,7 +128,7 @@ const IndexPage = ({ data }) => (
             A landing site for country artist Mark Leach for his upcoming single.
           </p>
           <div>
-            <Link to="http://markleachmusic.com" style={{ textDecoration: 'none' }}><h4>Visit Site</h4></Link>
+            <a to="http://markleachmusic.com" style={{ textDecoration: 'none' }} target="_blank"><h4>Visit Site</h4></a>
           </div>
         </Grid>
       </Grid>
@@ -139,10 +139,10 @@ const IndexPage = ({ data }) => (
           <h1 className={styles.sectionTitle}>Guerrilla Sportswear</h1>
           <h4>Clothing for fighters</h4>
           <p className={styles.sectionDescription}>
-            A landing site for country artist Mark Leach for his upcoming single.
+            Clothing for fighters, by fighters. Support amature MMA by purchasing fitness apparel from Guerrilla Sportswear and help a fighter get to the octagon.
           </p>
           <div>
-            <Link to="http://markleachmusic.com" style={{ textDecoration: 'none' }}><h4>Visit Site</h4></Link>
+            <a to="http://guerrillasportswear.com" style={{ textDecoration: 'none' }} target="_blank"><h4>Visit Site</h4></a>
           </div>
         </Grid>
         <Grid item xs={12} sm={6}>

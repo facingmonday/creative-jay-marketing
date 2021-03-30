@@ -158,7 +158,7 @@ const IndexPage = ({ data }) => (
             A landing site for country artist Mark Leach for his upcoming single.
           </p>
           <div>
-            <Link to="http://markleachmusic.com" style={{ textDecoration: 'none' }}><h4>Visit Site</h4></Link>
+            <a to="http://markleachmusic.com" style={{ textDecoration: 'none' }} target="_blank"><h4>Visit Site</h4></a>
           </div>
         </Grid>
       </Grid>
@@ -169,10 +169,10 @@ const IndexPage = ({ data }) => (
           <h1 className={styles.sectionTitle}>Guerrilla Sportswear</h1>
           <h4>Clothing for fighters</h4>
           <p className={styles.sectionDescription}>
-            Built with shopify.
+            An ecommerce site built with shopify. Guerrilla Sportswear is a fitness apparel brand by fighters, for fighters. Support amature MMA and help a fighter get to the octagon.
           </p>
           <div>
-            <Link to="http://guerrillasportswear.com" style={{ textDecoration: 'none' }}><h4>Visit Site</h4></Link>
+            <a to="http://guerrillasportswear.com" style={{ textDecoration: 'none' }} target="_blank"><h4>Visit Site</h4></a>
           </div>
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -195,52 +195,52 @@ const IndexPage = ({ data }) => (
       </div>
     </Section>
     <Section containerStyle={{
-      display: 'block', justifyContent: 'center', alignItems: 'center', backgroundColor: '#ddd',
+      display: 'block', justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff',
     }}
     >
       <SectionHeading
         title="Clients"
         subtitle="I get by with a little help from my friends"
       />
-      <Grid container>
+      <Grid container spacing={4}>
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <StaticImage
-            src="../assets/images/logos/logo-1.png"
+            src="../assets/images/client/clayspark.png"
           />
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <StaticImage
-            src="../assets/images/logos/logo-2.png"
+            src="../assets/images/client/ctd.png"
           />
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <StaticImage
-            src="../assets/images/logos/logo-3.png"
+            src="../assets/images/client/gsw.png"
           />
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <StaticImage
-            src="../assets/images/logos/logo-4.png"
+            src="../assets/images/client/leachs.png"
           />
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <StaticImage
-            src="../assets/images/logos/logo-5.png"
+            src="../assets/images/client/raw.png"
           />
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <StaticImage
-            src="../assets/images/logos/logo-6.png"
+            src="../assets/images/client/scottys.png"
           />
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <StaticImage
-            src="../assets/images/logos/logo-7.png"
+            src="../assets/images/client/squarescullery.png"
           />
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <StaticImage
-            src="../assets/images/logos/logo-8.png"
+            src="../assets/images/client/pristineexteriors.png"
           />
         </Grid>
       </Grid>
