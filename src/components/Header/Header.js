@@ -28,9 +28,29 @@ class Header extends Component {
   render() {
     const menu = [
       {
-        label: 'Work',
+        label: 'Apps',
         icon: '',
-        href: '/work',
+        href: '/work/apps',
+      },
+      {
+        label: 'Websites',
+        icon: '',
+        href: '/work/web',
+      },
+      {
+        label: 'Video',
+        icon: '',
+        href: '/work/video',
+      },
+      {
+        label: 'Design',
+        icon: '',
+        href: '/work/graphicdesign',
+      },
+      {
+        label: 'Photos',
+        icon: '',
+        href: '/work/photography',
       },
       {
         label: 'Blog',

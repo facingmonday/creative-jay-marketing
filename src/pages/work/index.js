@@ -97,8 +97,7 @@ const WorkPage = () => {
             <p className={styles.sectionUpperTitle}>A picture is worth a thousand words</p>
             <h1 className={styles.sectionTitle}>Photography</h1>
             <p className={styles.sectionDescription}>
-              Inspired by the hard list by Andy Fricella. Keep track of your critical tasks
-              that need to be done each day. When you complete them, cross them off the list. Once you've accomplished all your tasks for that day, we'll mark it as a W. Otherwise, we'll chalk it up as an L and we all know what that means.
+              Live events like concerts, festivals, corporate events, and fund raisers. Product promo photos. Model shoots.
             </p>
             <Button variant="contained" onClick={() => navigate('/work/photography')}><p style={{ margin: '5px 10px' }}>View More</p></Button>
           </Grid>

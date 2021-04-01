@@ -10,11 +10,10 @@ import SEO from '../components/SEO';
 import Button from '../components/Button';
 import Section from '../components/Section';
 import BlockSet from '../components/BlockSet';
-import IconBlock from '../components/IconBlock';
 import SectionHeading from '../components/SectionHeading';
 import HeroImage from '../components/HeroImage';
 
-import * as styles from './index.module.scss';
+import * as styles from './contact.module.scss';
 
 export const contactQuery = graphql`
   query {
@@ -56,7 +55,34 @@ const ContactPage = ({ data }) => {
       />
       <Section>
         <Grid container spacing={2}>
-          <Grid item xs={4} />
+          <Grid item xs={3} className={styles.contact__socialColumn}>
+            <StaticImage
+              src="../assets/images/social/instagram.png"
+              className={styles.contact__socialImage}
+            />
+            <h4 variant="h4">@jaydoesvideo</h4>
+          </Grid>
+          <Grid item xs={3} className={styles.contact__socialColumn}>
+            <StaticImage
+              src="../assets/images/social/tiktok.png"
+              className={styles.contact__socialImage}
+            />
+            <h4 variant="h4">tiktok.com/@jaydoesvideo</h4>
+          </Grid>
+          <Grid item xs={3} className={styles.contact__socialColumn}>
+            <StaticImage
+              src="../assets/images/social/vimeo.png"
+              className={styles.contact__socialImage}
+            />
+            <h4 variant="h4">vimeo.com/jaydoesvideo</h4>
+          </Grid>
+          <Grid item xs={3} className={styles.contact__socialColumn}>
+            <StaticImage
+              src="../assets/images/social/youtube.png"
+              className={styles.contact__socialImage}
+            />
+            <h4 variant="h4">youtube.com</h4>
+          </Grid>
         </Grid>
       </Section>
     </Page>
